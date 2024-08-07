@@ -1,0 +1,9 @@
+<h1 class ="text-center mt-3">Restaurants</h1>
+
+<ul class = "list-unstyled">
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant), :class =>"text-decoration-none link-info" %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a new restaurant", new_restaurant_path, :class => "btn btn-outline-primary mt-3 mb-3" %>
